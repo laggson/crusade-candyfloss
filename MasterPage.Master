@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Laggson.de.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Design.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="resources\favicon.ico" type="image/x-icon" />
+    <link rel='stylesheet' href='resources\font.font' type='text/css' media='all' />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+            <div class="header">
+                <h1><a href="Default.aspx">Laggson.de</a></h1>
+                <p>Kompetent geht anders.</p>
+                <a href="Default.aspx">
+                    <img id="header_logo" src="resources\kitty.png" title="Dieses Logo ist temporär." />
+                </a>
+            </div>
+
+            <div class="navigation">
+                <a href="Default.aspx">
+                    <div class="item" id="firstItem" title="Startseite">
+                        Startseite
+                    </div>
+                </a>
+
+                <a href="design/index.html">
+                    <div class="item" id="secondItem">
+                        Alternatives Design
+                    </div>
+                </a>
+
+                <a href="Default.aspx">
+                    <div class="item" id="thirdItem">
+                        Kategorie 3
+                    </div>
+                </a>
+            </div>
+
+            <div id="main">
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+                <div id="sidebar">
+                    <h3>Admin-Login:</h3>
+                    <asp:TextBox runat="server" TextMode="SingleLine" placeholder="Name" ID="TxtName" Width="100px"/>
+                    <asp:TextBox runat="server" TextMode="Password" placeholder="Passwort" ID="TxtPw" Width="100px"/><asp:Button runat="server" ID="Button1" Text="Login" OnClick="BtnLogin_Click" />
+                </div>
+            </div>
+
+            <div class="footer">
+                <table>
+                    <tr>
+                        <td>© 2016 bei <a href="Default.aspx" title="Laggson.de"><span>Laggson.de</span></a>. Theme inspiriert durch Spacious von 
+                            <a href="http://themegrill.com/themes/spacious" target="_blank" title="ThemeGrill" rel="designer"><span>ThemeGrill</span></a>
+                        </td>
+                        <td class="footer_links"><a href="Default.aspx" target="_blank" title="Penis">Dies</a></td>
+                        <td class="footer_links"><a href="design/index.html" target="_blank" title="Penis">Anderes Design</a></td>
+                        <td class="footer_links"><a href="Default.aspx" title="Impressum" >Impressum</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
